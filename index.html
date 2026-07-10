@@ -3,72 +3,222 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hemant — iOS Developer</title>
-  <meta name="description" content="Hemant builds iOS apps, including Panchang and FastRing. Portfolio, skills, and app support.">
+  <title>Hemant Kumar Kaushik — Senior Software Engineer</title>
+  <meta name="description" content="Hemant Kumar Kaushik — senior software engineer with 14 years of experience architecting distributed systems at SEEK, OLX, and Wood Mackenzie. Also builds iOS apps: Panchang and FastRing.">
+  <script>document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
   <header>
     <div class="container">
       <nav>
-        <a class="brand" href="/">thehkk</a>
-        <div class="links">
+        <a class="brand" href="/">the<span>hkk</span></a>
+        <div class="nav-right">
           <a href="/" aria-current="page">Home</a>
           <a href="/apps/">Apps</a>
+          <button class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          </button>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="container">
-      <!-- TODO: Replace this intro with your own words. -->
-      <h1>Hi, I'm Hemant.</h1>
-      <p class="lede">I'm an iOS developer who designs and ships apps for iPhone — from idea to the App Store.</p>
-
-      <p>I enjoy building small, focused apps that do one thing well. I care about clean
-      interfaces, smooth performance, and respecting users' privacy — my apps keep your
-      data on your device.</p>
-
-      <h2>Skills</h2>
-      <!-- TODO: Adjust this list to match your actual skill set. -->
-      <ul class="chips">
-        <li>Swift</li>
-        <li>SwiftUI</li>
-        <li>UIKit</li>
-        <li>iOS App Development</li>
-        <li>App Store Publishing</li>
-        <li>Xcode</li>
-        <li>Git</li>
-      </ul>
-
-      <h2>My apps</h2>
-      <div class="card-grid">
-        <a class="card" href="/apps/panchang/">
-          <span class="app-icon">🗓️</span>
-          <h3>Panchang</h3>
-          <p>Daily Hindu calendar — tithi, nakshatra, and auspicious timings at a glance.</p>
-        </a>
-        <a class="card" href="/apps/fastring/">
-          <span class="app-icon">⏱️</span>
-          <h3>FastRing</h3>
-          <p>A simple, beautiful fasting timer to track your fasting windows.</p>
-        </a>
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
       </div>
+      <div class="container">
+        <p class="eyebrow fade-up">Senior Software Engineer · 14 years</p>
+        <h1 class="fade-up">Hemant Kumar <span class="grad">Kaushik</span></h1>
+        <p class="lede fade-up">I architect distributed systems that handle tens of millions of requests a day — and lately, I've been embedding LLM workflows and agentic pipelines into production backends at SEEK, OLX, and Wood Mackenzie.</p>
+        <div class="btn-row fade-up">
+          <a class="btn" href="mailto:hemantforever007@gmail.com">Get in touch</a>
+          <a class="btn secondary" href="https://linkedin.com/in/hkk840" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="/apps/">My iOS apps</a>
+        </div>
+        <p class="location fade-up"><span class="dot"></span> Gurugram, India · Open to remote</p>
+      </div>
+    </section>
 
-      <h2>Get in touch</h2>
-      <p>The best way to reach me is by email:
-        <a href="mailto:hemantforever007@gmail.com">hemantforever007@gmail.com</a>
-      </p>
-      <!-- TODO: Add links to GitHub, LinkedIn, X, etc. if you'd like. -->
-    </div>
+    <!-- ============ Stats ============ -->
+    <section>
+      <div class="container">
+        <div class="stats">
+          <div class="stat reveal">
+            <div class="num">14+</div>
+            <div class="label">years of engineering experience</div>
+          </div>
+          <div class="stat reveal">
+            <div class="num">40M+</div>
+            <div class="label">requests/day handled at OLX</div>
+          </div>
+          <div class="stat reveal">
+            <div class="num">45%</div>
+            <div class="label">latency cut via architectural overhaul</div>
+          </div>
+          <div class="stat reveal">
+            <div class="num">25%</div>
+            <div class="label">revenue uplift from performance work</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section id="about">
+      <div class="container reveal">
+        <p class="section-label">About</p>
+        <h2>Systems that scale, <span class="grad">AI that ships</span></h2>
+        <p>I've spent 14 years owning systems from whiteboard to production scale — distributed microservices and serverless topologies on AWS, high-volume platforms serving 30–40M+ requests a day, and the observability to keep them honest.</p>
+        <p>My current focus is AI infrastructure: embedding LLM workflows into backend orchestration and solving the unglamorous production problems — prompt caching, vector search optimization, guardrails, and taming non-deterministic model outputs inside deterministic systems. On the side, I design and ship <a href="/apps/">iOS apps</a> end-to-end.</p>
+      </div>
+    </section>
+
+    <!-- ============ Experience ============ -->
+    <section id="experience">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">Experience</p>
+          <h2>Where I've built</h2>
+        </div>
+        <ul class="timeline">
+          <li class="reveal">
+            <div class="role">Senior Software Engineer · <span class="company">SEEK</span></div>
+            <div class="meta">Sep 2025 — Jun 2026 · Remote · Principal-level contractor via Zyoin</div>
+            <p>Spearheaded an asynchronous AI Recruiter Copilot on a fully serverless AWS stack, led a multi-service Splunk → Datadog migration with OpenTelemetry, and designed a log-buffering layer that cut enterprise observability spend at scale.</p>
+            <ul class="tags"><li>NestJS</li><li>React</li><li>AWS Lambda</li><li>SQS</li><li>DynamoDB</li><li>OpenTelemetry</li></ul>
+          </li>
+          <li class="reveal">
+            <div class="role">Founder / Builder · <span class="company">WhyVote.in</span></div>
+            <div class="meta">Jan 2025 — Sep 2025 · Solo end-to-end product</div>
+            <p>Conceptualized, architected, and shipped a civic-tech platform from zero to production as a solo engineer — REST APIs, auth, PostgreSQL schema design, CI/CD on AWS, and a performance-tuned React frontend.</p>
+            <ul class="tags"><li>Node.js</li><li>Express</li><li>React</li><li>PostgreSQL</li><li>AWS</li></ul>
+          </li>
+          <li class="reveal">
+            <div class="role">Full-Stack Principal Engineer · <span class="company">Wood Mackenzie</span></div>
+            <div class="meta">Jan 2024 — Dec 2024 · Gurugram · Global energy analytics SaaS</div>
+            <p>Owned the architectural roadmap for 5–6 core microservices sustaining 8–9K requests/minute, led two cross-functional teams of engineers and data scientists, and drove a monolith-to-modular refactor that enabled deploys every 1–2 days.</p>
+            <ul class="tags"><li>Node.js</li><li>React</li><li>Microservices</li><li>System Design</li><li>Mentorship</li></ul>
+          </li>
+          <li class="reveal">
+            <div class="role">Software Engineer III / Tech Lead · <span class="company">OLX Group</span></div>
+            <div class="meta">Mar 2021 — Jan 2024 · Gurugram · 30–40M requests/day</div>
+            <p>Led full-stack architecture for high-throughput classifieds platforms. Slashed core service latency by 45% through bottleneck analysis and architectural overhauls — directly driving a 25% uplift in top-line sales.</p>
+            <ul class="tags"><li>Node.js</li><li>React</li><li>PostgreSQL</li><li>MongoDB</li><li>Event-Driven</li></ul>
+          </li>
+          <li class="reveal">
+            <div class="role">Technical Lead · <span class="company">Nagarro</span></div>
+            <div class="meta">Jul 2019 — Mar 2021 · Gurugram</div>
+            <p>Directed cross-functional teams delivering enterprise full-stack products; modernized legacy architectures into modular services and lifted baseline performance by 20%.</p>
+            <ul class="tags"><li>Node.js</li><li>React</li><li>Architecture</li></ul>
+          </li>
+          <li class="reveal">
+            <div class="role">Senior Software Engineer · <span class="company">Netsurion</span></div>
+            <div class="meta">May 2018 — Jul 2019 · Bengaluru</div>
+            <p>Built backend microservices and SD-WAN features for network security platforms deployed across 200+ enterprise sites.</p>
+            <ul class="tags"><li>Node.js</li><li>Angular</li><li>SD-WAN</li></ul>
+          </li>
+          <li class="reveal">
+            <div class="role">Earlier career · <span class="company">Sagoon · MediaAgility · BluePi · Enabling Dimensions</span></div>
+            <div class="meta">2012 — 2018</div>
+            <p>Six foundational years of full-stack engineering — responsive web apps, relational database optimization, and early cloud-hosted backend modules.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Skills ============ -->
+    <section id="skills">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">Skills</p>
+          <h2>What I work with</h2>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-group reveal">
+            <h3>AI / LLM</h3>
+            <ul class="chips"><li>LLM integration</li><li>RAG pipelines</li><li>Agentic workflows</li><li>Prompt engineering</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Languages &amp; Backend</h3>
+            <ul class="chips"><li>Node.js</li><li>TypeScript</li><li>Python</li><li>NestJS</li><li>Express</li><li>gRPC</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Frontend &amp; Mobile</h3>
+            <ul class="chips"><li>React</li><li>Next.js</li><li>Redux</li><li>Swift / iOS</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Databases</h3>
+            <ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>DynamoDB</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Cloud &amp; Infra</h3>
+            <ul class="chips"><li>AWS Lambda</li><li>SQS</li><li>API Gateway</li><li>CloudFormation</li><li>Docker</li><li>CI/CD</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Observability &amp; Leadership</h3>
+            <ul class="chips"><li>Datadog</li><li>OpenTelemetry</li><li>Splunk</li><li>Mentoring</li><li>Architecture reviews</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Apps ============ -->
+    <section id="apps">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label">Side Projects</p>
+          <h2>iOS apps I've shipped</h2>
+          <p class="muted">Designed, built, and published end-to-end — because building for scale is the day job, and building for delight is the hobby.</p>
+        </div>
+        <div class="card-grid">
+          <a class="card reveal" href="/apps/panchang/">
+            <span class="app-icon">🗓️</span>
+            <h3>Panchang</h3>
+            <p>Daily Hindu calendar — tithi, nakshatra, and auspicious timings at a glance.</p>
+            <span class="card-cta">View app →</span>
+          </a>
+          <a class="card reveal" href="/apps/fastring/">
+            <span class="app-icon">⏱️</span>
+            <h3>FastRing</h3>
+            <p>A simple, beautiful fasting timer to track your fasting windows.</p>
+            <span class="card-cta">View app →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <p class="section-label">Contact</p>
+          <h2>Let's build something</h2>
+          <p>Whether it's a distributed system, an AI pipeline, or just a good conversation about engineering — my inbox is open.</p>
+          <div class="btn-row" style="justify-content: center;">
+            <a class="btn" href="mailto:hemantforever007@gmail.com">hemantforever007@gmail.com</a>
+            <a class="btn secondary" href="https://linkedin.com/in/hkk840" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container">
-      <span>© 2026 Hemant. All rights reserved.</span>
-      <span><a href="/apps/">Apps</a> · <a href="mailto:hemantforever007@gmail.com">Contact</a></span>
+      <span>© 2026 Hemant Kumar Kaushik. All rights reserved.</span>
+      <span><a href="/apps/">Apps</a> · <a href="https://linkedin.com/in/hkk840" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:hemantforever007@gmail.com">Email</a></span>
     </div>
   </footer>
+
+  <script src="/assets/theme.js"></script>
 </body>
 </html>
