@@ -8,20 +8,25 @@ hosted on GitHub Pages at [thehkk.com](https://thehkk.com).
 ```
 /                        Portfolio (about, skills, contact)
 /apps/                   All apps
-/apps/panchang/          Panchang app page
-/apps/panchang/privacy/  Privacy policy  → use in App Store Connect
-/apps/panchang/support/  Support page    → use in App Store Connect
-/apps/fastring/          FastRing app page
-/apps/fastring/privacy/  Privacy policy  → use in App Store Connect
-/apps/fastring/support/  Support page    → use in App Store Connect
+/apps/<app>/             App page
+/apps/<app>/privacy/     Privacy policy  → use in App Store Connect
+/apps/<app>/support/     Support page    → use in App Store Connect
 ```
 
 URLs for App Store Connect (don't change these once submitted):
 
-- Panchang privacy: `https://thehkk.com/apps/panchang/privacy/`
-- Panchang support: `https://thehkk.com/apps/panchang/support/`
-- FastRing privacy: `https://thehkk.com/apps/fastring/privacy/`
-- FastRing support: `https://thehkk.com/apps/fastring/support/`
+| App | Privacy policy URL | Support URL |
+|---|---|---|
+| Panchang | `https://thehkk.com/apps/panchang/privacy/` | `https://thehkk.com/apps/panchang/support/` |
+| FastRing | `https://thehkk.com/apps/fastring/privacy/` | `https://thehkk.com/apps/fastring/support/` |
+| Worth    | `https://thehkk.com/apps/worth/privacy/`    | `https://thehkk.com/apps/worth/support/`    |
+| GymLoop  | `https://thehkk.com/apps/gymloop/privacy/`  | `https://thehkk.com/apps/gymloop/support/`  |
+| Vastu    | `https://thehkk.com/apps/vastu/privacy/`    | `https://thehkk.com/apps/vastu/support/`    |
+
+Apps still awaiting review show a "Coming soon" badge instead of a download
+button. When one goes live, replace that badge in `/apps/<app>/index.html`
+with a country-agnostic App Store link:
+`https://apps.apple.com/app/<slug>/id<numeric-id>`
 
 ## Preview locally
 
