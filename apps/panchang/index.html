@@ -8,72 +8,239 @@
   <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-  <nav class="nav">
-    <a href="../../index.html" class="nav-brand">theHKK</a>
-    <div class="nav-links">
-      <a href="../../index.html">Home</a>
-      <a href="../index.html">Apps</a>
-      <a class="nav-cta" href="mailto:hemantforever007@gmail.com">Get in touch</a>
-      <button class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
-        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
-        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
-      </button>
-    </div>
-  </nav>
+<body style="--accent-l:oklch(.6 .15 55);--accent-d:oklch(.78 .13 65);--tint-l:oklch(.95 .03 65);--tint-d:oklch(.3 .04 65);">
+  <div class="nav-outer">
+    <nav class="nav">
+      <a class="nav-brand" href="../../index.html">
+        <span class="nav-mark" aria-hidden="true">h</span>
+        <span class="nav-wordmark">theHKK / apps</span>
+      </a>
 
-  <main>
-    <div class="container">
-      <p class="breadcrumb"><a href="../index.html">Apps</a> / Panchang</p>
-
-      <div class="app-hero">
-        <img src="../../assets/panchang.png" alt="Panchang app icon">
-        <div>
-          <h1>Panchang</h1>
-          <p class="lede" style="margin-top:10px;">Tithi, Nakshatra &amp; Muhurat.</p>
+      <div class="switcher">
+        <button class="switcher-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <img class="switcher-icon" src="../../assets/panchang.png" alt="">
+          <span class="switcher-label">Panchang</span>
+          <span class="switcher-count">5</span>
+          <span class="switcher-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="switcher-panel" hidden>
+          <div class="switcher-search">
+            <input type="search" placeholder="Search apps&#8230;" aria-label="Search apps">
+          </div>
+          <div class="switcher-list">
+            <div class="switcher-group">Jump to</div>
+            <a class="switcher-row" href="../index.html">
+              <span class="sw-icon is-all" aria-hidden="true">&#9723;</span>
+              <span class="sw-text"><span class="sw-name">All apps</span></span>
+            </a>
+            <a class="switcher-row" href="index.html" aria-current="page" data-search="panchang daily hindu almanac tithi nakshatra muhurat">
+              <img class="sw-icon" src="../../assets/panchang.png" alt="">
+              <span class="sw-text"><span class="sw-name">Panchang</span><span class="sw-short">Daily Hindu almanac</span></span>
+              <span class="sw-dot is-live" aria-label="On the App Store"></span>
+            </a>
+            <a class="switcher-row" href="../fastring/index.html" data-search="fastring fasting timer intermittent lock screen">
+              <img class="sw-icon" src="../../assets/fastring.png" alt="">
+              <span class="sw-text"><span class="sw-name">FastRing</span><span class="sw-short">Fasting timer</span></span>
+              <span class="sw-dot is-live" aria-label="On the App Store"></span>
+            </a>
+            <a class="switcher-row" href="../worth/index.html" data-search="worth net worth tracker fd mf offline money">
+              <img class="sw-icon" src="../../assets/worth.png" alt="">
+              <span class="sw-text"><span class="sw-name">Worth</span><span class="sw-short">Net worth tracker</span></span>
+              <span class="sw-dot is-live" aria-label="On the App Store"></span>
+            </a>
+            <a class="switcher-row" href="../gymloop/index.html" data-search="gymloop gym split tracker rotation workout">
+              <img class="sw-icon" src="../../assets/gymloop.png" alt="">
+              <span class="sw-text"><span class="sw-name">GymLoop</span><span class="sw-short">Gym split tracker</span></span>
+              <span class="sw-dot is-live" aria-label="On the App Store"></span>
+            </a>
+            <a class="switcher-row" href="../vastu/index.html" data-search="vastu compass 16 zone home analyzer">
+              <img class="sw-icon" src="../../assets/vastu.png" alt="">
+              <span class="sw-text"><span class="sw-name">Vastu</span><span class="sw-short">16-zone Vastu compass</span></span>
+              <span class="sw-dot" aria-label="Coming soon"></span>
+            </a>
+            <div class="switcher-empty" hidden>Nothing matches that.</div>
+          </div>
         </div>
       </div>
 
-      <p style="margin-top:34px; max-width:640px;">Today's tithi, nakshatra and muhurat — computed entirely on your device, for your
-      exact location. No ads, no accounts, no internet required. Open the app and today is
-      simply there: tithi, nakshatra, yoga, karana and vara with precise end times;
-      sunrise, sunset, moonrise and moonset; Rahu Kaal and Abhijit Muhurat. Nothing else
-      competing for your attention.</p>
-
-      <div class="btn-row">
-        <a class="btn btn-primary" href="https://apps.apple.com/app/panchang-daily-hindu-almanac/id6789538571" target="_blank" rel="noopener">Download on the App Store</a>
-        <a class="btn btn-outline" href="support/index.html">Support</a>
-        <a class="btn btn-outline" href="privacy/index.html">Privacy Policy</a>
+      <div class="nav-links">
+        <a class="nav-cta" href="mailto:hemantforever007@gmail.com">Get in touch</a>
+        <button class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
       </div>
+    </nav>
+  </div>
 
-      <h2>Features</h2>
-      <ul class="feature-list">
-        <li>Computed, not downloaded — a professional-grade astronomical model (Sun and Moon to about an arcminute, Lahiri ayanamsa) running entirely on device</li>
-        <li>Zero network requests, so it works identically on a flight, in a village, or on a mountain</li>
-        <li>Your current location or any of 10,000+ cities worldwide — so an Ekadashi in New Jersey lands on the correct local day, not Delhi's</li>
-        <li>Amanta and Purnimanta month conventions, one tap apart, with named Ekadashis and Adhika months</li>
-        <li>Festivals timed to the right moment — Diwali at pradosha, Shivaratri at nishita</li>
-        <li>Regional calendars: Tamil, Kerala, Bengali, Telugu, Jain and Sikh</li>
-        <li>Read it in English, हिन्दी, తెలుగు or தமிழ், with optional Devanagari numerals</li>
-        <li>Home-screen widgets and vrat reminders</li>
-      </ul>
+  <main style="padding-top:0;padding-bottom:0;">
+    <!-- ===== Hero ===== -->
+    <section class="app-hero-section">
+      <div class="app-hero-glow" aria-hidden="true"></div>
+      <div class="app-hero">
+        <div class="app-hero-copy">
+          <p class="breadcrumb"><a href="../index.html">Apps</a> <span>/</span> <span class="here">Panchang</span></p>
 
-      <h2>Pricing</h2>
-      <p style="max-width:640px;">Free to use for the daily panchang. A single lifetime purchase unlocks the full
-      calendar for any month and year, the festival calendar, and every muhurta and kaal.
-      No subscription.</p>
-    </div>
+          <div class="app-hero-id">
+            <img src="../../assets/panchang.png" alt="Panchang app icon">
+            <div>
+              <h1>Panchang</h1>
+              <div class="app-hero-meta">iOS &middot; Free with lifetime unlock</div>
+            </div>
+          </div>
+
+          <p class="app-headline">Today&#8217;s panchang, computed for exactly where you are.</p>
+          <p class="app-intro">Open it and today is simply there: tithi, nakshatra, yoga, karana and vara with precise end times, sunrise through moonset, Rahu Kaal and Abhijit Muhurat. No ads, no accounts, no network.</p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://apps.apple.com/app/panchang-daily-hindu-almanac/id6789538571" target="_blank" rel="noopener">Download on the App Store</a>
+            <a class="btn btn-outline" href="support/index.html">Support</a>
+            <a class="btn btn-outline" href="privacy/index.html">Privacy</a>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <img class="shot shot-hero" src="../../assets/shots/panchang-01-today.jpg"
+               width="640" height="1385" alt="Panchang screenshot: Today, simply there — tithi, nakshatra, yoga, karana and vara with the times they end">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Screens ===== -->
+    <section class="screens">
+      <div class="screens-head">
+        <h2>A look inside.</h2>
+        <div class="screens-note">From the App Store</div>
+      </div>
+      <div class="screens-strip">
+        <div class="screen">
+          <img class="shot" src="../../assets/shots/panchang-03-periods.jpg" loading="lazy"
+               width="640" height="1385" alt="Panchang screenshot: Every window of the day — Rahu Kaal, Brahma Muhurta, Yamaganda, Gulika, Dur Muhurtam and Bhadra">
+          <p class="screen-caption">Auspicious and inauspicious windows, timed to your location.</p>
+        </div>
+        <div class="screen">
+          <img class="shot" src="../../assets/shots/panchang-04-choghadiya.jpg" loading="lazy"
+               width="640" height="1385" alt="Panchang screenshot: Choghadiya and Hora — eight divisions of day and night, and all twenty-four planetary hours">
+          <p class="screen-caption">Choghadiya and Hora, computed for your place and date.</p>
+        </div>
+        <div class="screen">
+          <img class="shot" src="../../assets/shots/panchang-05-month.jpg" loading="lazy"
+               width="640" height="1385" alt="Panchang screenshot: Any month, any year — the full festival calendar, Amanta or Purnimanta">
+          <p class="screen-caption">Amanta or Purnimanta, one tap apart, with named Ekadashis.</p>
+        </div>
+        <div class="screen">
+          <img class="shot" src="../../assets/shots/panchang-06-upcoming.jpg" loading="lazy"
+               width="640" height="1385" alt="Panchang screenshot: The months ahead — every festival and vrat, three months out">
+          <p class="screen-caption">Festivals and vrats for your selected place, three months out.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Features ===== -->
+    <section class="container" style="padding-bottom:100px;">
+      <div class="split">
+        <div class="split-stick">
+          <p class="eyebrow">Features</p>
+          <h2>Computed, not downloaded.</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Arcminute accuracy</div>
+            <div class="f-body">A professional-grade astronomical model for Sun and Moon positions with Lahiri ayanamsa, running entirely on the phone.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Works anywhere</div>
+            <div class="f-body">Zero network requests. Identical behaviour on a flight, in a village, or on a mountain.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Your exact location</div>
+            <div class="f-body">Current location or any of 10,000+ cities, so an Ekadashi in New Jersey lands on the correct local day &mdash; not Delhi&#8217;s.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Both month conventions</div>
+            <div class="f-body">Amanta and Purnimanta, one tap apart, with named Ekadashis and Adhika months handled properly.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Festivals timed right</div>
+            <div class="f-body">Diwali at pradosha, Shivaratri at nishita. The moment, not just the date.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Four languages</div>
+            <div class="f-body">English, &#2361;&#2367;&#2344;&#2381;&#2342;&#2368;, &#3108;&#3142;&#3122;&#3137;&#3095;&#3137; and &#2980;&#2990;&#3007;&#2996;&#3021;, with optional Devanagari numerals and regional calendars.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== On device ===== -->
+    <section class="band">
+      <div class="band-inner">
+        <div>
+          <p class="eyebrow">On device</p>
+          <h2>It never asks you who you are.</h2>
+          <p>There is no account, no analytics SDK and no server to talk to. Location stays on the device and is used only to place the Sun and Moon. Free for the daily panchang; one lifetime purchase unlocks any month, any year, and every muhurta.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><span class="k">Network requests</span><span class="v">None</span></div>
+          <div class="fact"><span class="k">Account required</span><span class="v">No</span></div>
+          <div class="fact"><span class="k">Analytics / trackers</span><span class="v">None</span></div>
+          <div class="fact"><span class="k">Pricing</span><span class="v">Lifetime, no sub</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Also by me ===== -->
+    <section class="container" style="padding-top:100px;padding-bottom:100px;">
+      <div class="others-head">
+        <p class="eyebrow">Also by me</p>
+        <a class="others-more" href="../index.html">View all 5 apps &rarr;</a>
+      </div>
+      <div class="others-grid">
+        <a class="other-card" href="../fastring/index.html">
+          <img src="../../assets/fastring.png" alt="">
+          <span class="o-text"><span class="o-name">FastRing</span><span class="o-short">Fasting timer</span></span>
+        </a>
+        <a class="other-card" href="../worth/index.html">
+          <img src="../../assets/worth.png" alt="">
+          <span class="o-text"><span class="o-name">Worth</span><span class="o-short">Net worth tracker</span></span>
+        </a>
+        <a class="other-card" href="../gymloop/index.html">
+          <img src="../../assets/gymloop.png" alt="">
+          <span class="o-text"><span class="o-name">GymLoop</span><span class="o-short">Gym split tracker</span></span>
+        </a>
+        <a class="other-card" href="../vastu/index.html">
+          <img src="../../assets/vastu.png" alt="">
+          <span class="o-text"><span class="o-name">Vastu</span><span class="o-short">16-zone Vastu compass</span></span>
+        </a>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>© 2026 Hemant Kumar Kaushik. All rights reserved.</span>
-      <span class="links"><a href="privacy/index.html">Privacy</a><a href="support/index.html">Support</a></span>
+  <footer class="site-foot">
+    <div class="site-foot-inner">
+      <h2>Something broken, or an idea worth building?</h2>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:hemantforever007@gmail.com">hemantforever007@gmail.com</a>
+        <a class="btn btn-outline" href="support/index.html">Panchang support</a>
+        <a class="btn btn-outline" href="privacy/index.html">Privacy</a>
+      </div>
+      <div class="foot-rule">
+        <span>&copy; 2026 Hemant Kumar Kaushik</span>
+        <span class="links"><a href="../index.html">Apps</a><a href="../../index.html">theHKK.com</a></span>
+      </div>
     </div>
   </footer>
+
   <script src="../../assets/theme.js"></script>
+  <script src="../../assets/apps.js"></script>
 </body>
 </html>

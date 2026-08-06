@@ -4,72 +4,258 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Worth — theHKK</title>
-  <meta name="description" content="A net worth tracker with no servers, no bank linking, and no sign-up — your numbers stay on your phone.">
+  <meta name="description" content="Worth for iOS — an offline net worth tracker for FDs, mutual funds and more. No servers, no bank linking, no sign-up.">
   <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body>
-  <nav class="nav">
-    <a href="../../index.html" class="nav-brand">theHKK</a>
-    <div class="nav-links">
-      <a href="../../index.html">Home</a>
-      <a href="../../apps/index.html">Apps</a>
-      <a class="nav-cta" href="mailto:hemantforever007@gmail.com">Get in touch</a>
-      <button class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
-        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
-        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
-      </button>
-    </div>
-  </nav>
+<body style="--accent-l:oklch(.55 .13 255);--accent-d:oklch(.79 .11 255);--tint-l:oklch(.95 .025 255);--tint-d:oklch(.3 .035 255);">
+  <div class="nav-outer">
+    <nav class="nav">
+      <a class="nav-brand" href="../../index.html">
+        <span class="nav-mark" aria-hidden="true">h</span>
+        <span class="nav-wordmark">theHKK / apps</span>
+      </a>
 
-  <main>
-    <div class="container">
-      <p class="breadcrumb"><a href="../index.html">Apps</a> / Worth</p>
-
-      <div class="app-hero">
-        <img src="../../assets/worth.png" alt="Worth app icon">
-        <div>
-          <h1>Worth</h1>
-          <p class="lede" style="margin-top:10px;">Offline FD, MF &amp; net worth.</p>
+      <div class="switcher">
+        <button class="switcher-btn" type="button" aria-haspopup="true" aria-expanded="false">
+          <img class="switcher-icon" src="../../assets/worth.png" alt="">
+          <span class="switcher-label">Worth</span>
+          <span class="switcher-count">5</span>
+          <span class="switcher-chev" aria-hidden="true">&#9660;</span>
+        </button>
+        <div class="switcher-panel" hidden>
+          <div class="switcher-search">
+            <input type="search" placeholder="Search apps&#8230;" aria-label="Search apps">
+          </div>
+          <div class="switcher-list">
+            <div class="switcher-group">Jump to</div>
+            <a class="switcher-row" href="../index.html">
+              <span class="sw-icon is-all" aria-hidden="true">&#9723;</span>
+              <span class="sw-text"><span class="sw-name">All apps</span></span>
+            </a>
+            <a class="switcher-row" href="../panchang/index.html" data-search="panchang daily hindu almanac tithi nakshatra muhurat">
+              <img class="sw-icon" src="../../assets/panchang.png" alt="">
+              <span class="sw-text"><span class="sw-name">Panchang</span><span class="sw-short">Daily Hindu almanac</span></span>
+              <span class="sw-dot is-live" aria-label="On the App Store"></span>
+            </a>
+            <a class="switcher-row" href="../fastring/index.html" data-search="fastring fasting timer intermittent lock screen">
+              <img class="sw-icon" src="../../assets/fastring.png" alt="">
+              <span class="sw-text"><span class="sw-name">FastRing</span><span class="sw-short">Fasting timer</span></span>
+              <span class="sw-dot is-live" aria-label="On the App Store"></span>
+            </a>
+            <a class="switcher-row" href="index.html" aria-current="page" data-search="worth net worth tracker fd mf offline money">
+              <img class="sw-icon" src="../../assets/worth.png" alt="">
+              <span class="sw-text"><span class="sw-name">Worth</span><span class="sw-short">Net worth tracker</span></span>
+              <span class="sw-dot is-live" aria-label="On the App Store"></span>
+            </a>
+            <a class="switcher-row" href="../gymloop/index.html" data-search="gymloop gym split tracker rotation workout">
+              <img class="sw-icon" src="../../assets/gymloop.png" alt="">
+              <span class="sw-text"><span class="sw-name">GymLoop</span><span class="sw-short">Gym split tracker</span></span>
+              <span class="sw-dot is-live" aria-label="On the App Store"></span>
+            </a>
+            <a class="switcher-row" href="../vastu/index.html" data-search="vastu compass 16 zone home analyzer">
+              <img class="sw-icon" src="../../assets/vastu.png" alt="">
+              <span class="sw-text"><span class="sw-name">Vastu</span><span class="sw-short">16-zone Vastu compass</span></span>
+              <span class="sw-dot" aria-label="Coming soon"></span>
+            </a>
+            <div class="switcher-empty" hidden>Nothing matches that.</div>
+          </div>
         </div>
       </div>
 
-      <p class="badge-soon">Coming soon to the App&nbsp;Store</p>
-
-      <p style="margin-top:22px; max-width:640px;">Worth is a net worth tracker that treats your money as nobody&rsquo;s business but yours. No sign-up, no bank linking, no servers, no analytics. The app makes zero network calls &mdash; your accounts, balances, and history live in a private database on your device, synced only through your own iCloud.</p>
-
-      <div class="btn-row">
-        <a class="btn btn-outline" href="support/index.html">Support</a>
-        <a class="btn btn-outline" href="privacy/index.html">Privacy Policy</a>
+      <div class="nav-links">
+        <a class="nav-cta" href="mailto:hemantforever007@gmail.com">Get in touch</a>
+        <button class="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
       </div>
+    </nav>
+  </div>
 
-      <h2>Features</h2>
-      <ul class="feature-list">
-        <li>One calm number: your net worth, with a monthly delta and a 12-month trend &mdash; no daily flicker, no red-green anxiety</li>
-        <li>A five-minute monthly ritual: walk your accounts, type the new values, see what changed</li>
-        <li>Built for Indian portfolios &mdash; FDs, EPF, PPF, NPS, SGB, gold in grams, real estate &mdash; alongside global stocks, crypto, and any currency</li>
-        <li>Fixed deposits track themselves: enter principal, rate, and dates once, and Worth computes today&rsquo;s value, maturity value, and auto-renewal</li>
-        <li>Scan instead of typing: photograph an FD page, a holdings screenshot, or a PDF statement and on-device OCR pre-fills the entry for your review</li>
-        <li>Charts and projections &mdash; allocation, trends, and &ldquo;at this pace you reach &#8377;X by year Y&rdquo;</li>
-        <li>Home Screen and Lock Screen widgets</li>
-        <li>CSV export and import, so your data is portable, always</li>
-        <li>Face ID lock, Indian numbering (&#8377;12,34,567), and a dark mode designed first</li>
-      </ul>
+  <main style="padding-top:0;padding-bottom:0;">
+    <!-- ===== Hero ===== -->
+    <section class="app-hero-section">
+      <div class="app-hero-glow" aria-hidden="true"></div>
+      <div class="app-hero">
+        <div class="app-hero-copy">
+          <p class="breadcrumb"><a href="../index.html">Apps</a> <span>/</span> <span class="here">Worth</span></p>
 
-      <h2>Pricing</h2>
-      <p style="max-width:640px;">Free: up to 3 accounts, the full monthly check-in, the dashboard, a 1-year chart, and CSV export. One purchase unlocks everything forever &mdash; unlimited accounts, all chart ranges, projections and goals, widgets, themes, and CSV import. No subscription, ever. Face ID lock and CSV export stay free for everyone: a privacy app that holds your own data hostage would be no privacy app at all.</p>
-    </div>
+          <div class="app-hero-id">
+            <img src="../../assets/worth.png" alt="Worth app icon">
+            <div>
+              <h1>Worth</h1>
+              <div class="app-hero-meta">iOS &middot; No bank linking</div>
+            </div>
+          </div>
+
+          <p class="app-headline">Your net worth, without handing anyone your bank login.</p>
+          <p class="app-intro">Worth treats your money as nobody&#8217;s business but yours. No sign-up, no bank linking, no servers, no analytics. The app makes zero network calls &mdash; your accounts, balances and history live in a private database on your device, synced only through your own iCloud.</p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://apps.apple.com/app/worth-private-net-worth/id6794246682" target="_blank" rel="noopener">Download on the App Store</a>
+            <a class="btn btn-outline" href="support/index.html">Support</a>
+            <a class="btn btn-outline" href="privacy/index.html">Privacy</a>
+          </div>
+        </div>
+
+        <div class="phone-wrap">
+          <img class="shot shot-hero" src="../../assets/shots/worth-01-shot1.jpg"
+               width="640" height="1385" alt="Worth screenshot: One calm number — a net worth dashboard with the month's change and allocation">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Screens ===== -->
+    <section class="screens">
+      <div class="screens-head">
+        <h2>A look inside.</h2>
+        <div class="screens-note">From the App Store</div>
+      </div>
+      <div class="screens-strip">
+        <div class="screen">
+          <img class="shot" src="../../assets/shots/worth-02-shot2.jpg" loading="lazy"
+               width="640" height="1385" alt="Worth screenshot: Scan your FDs and funds — reviewing deposits read by on-device OCR, never uploaded">
+          <p class="screen-caption">Bank pages, PDFs and screenshots, read on device.</p>
+        </div>
+        <div class="screen">
+          <img class="shot" src="../../assets/shots/worth-03-shot3.jpg" loading="lazy"
+               width="640" height="1385" alt="Worth screenshot: Deposits that track themselves — a fixed deposit showing value today and maturity value">
+          <p class="screen-caption">Enter the terms once; Worth computes the rest.</p>
+        </div>
+        <div class="screen">
+          <img class="shot" src="../../assets/shots/worth-04-shot4.jpg" loading="lazy"
+               width="640" height="1385" alt="Worth screenshot: A five-minute monthly ritual — the monthly account check-in">
+          <p class="screen-caption">Walk your accounts once a month.</p>
+        </div>
+        <div class="screen">
+          <img class="shot" src="../../assets/shots/worth-06-shot6.jpg" loading="lazy"
+               width="640" height="1385" alt="Worth screenshot: Nothing goes in, nothing goes out — no sign-up, no servers, no tracking, zero network calls">
+          <p class="screen-caption">No sign-up, no servers, zero network calls.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Features ===== -->
+    <section class="container" style="padding-bottom:100px;">
+      <div class="split">
+        <div class="split-stick">
+          <p class="eyebrow">Features</p>
+          <h2>Manual on purpose.</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">No bank linking</div>
+            <div class="f-body">No aggregator, no read-only credentials sitting in someone else&#8217;s database. You type the numbers, and they stay yours.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Built for Indian portfolios</div>
+            <div class="f-body">FDs, EPF, PPF, NPS, SGB, gold in grams and real estate &mdash; alongside global stocks, crypto and any currency.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Deposits track themselves</div>
+            <div class="f-body">Enter principal, rate and dates once, and Worth computes today&#8217;s value, maturity value and auto-renewal.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Scan instead of typing</div>
+            <div class="f-body">Photograph an FD page, a holdings screenshot or a PDF statement, and on-device OCR pre-fills the entry for your review.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">One calm number</div>
+            <div class="f-body">Your net worth with a monthly delta and a 12-month trend. No daily flicker, no red-green anxiety.</div>
+          </div>
+          <div class="feature-cell">
+            <span class="dot" aria-hidden="true"></span>
+            <div class="f-title">Yours to take</div>
+            <div class="f-body">CSV export and import, Face ID lock, Indian numbering (&#8377;12,34,567), and a dark mode designed first.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== On device ===== -->
+    <section class="band">
+      <div class="band-inner">
+        <div>
+          <p class="eyebrow">On device</p>
+          <h2>The safest place for your finances is your own phone.</h2>
+          <p>Worth has no servers of mine. Balances, account names and history live in a private database on your device and sync only through your own iCloud. There is no sign-up, no analytics and no third-party SDK reading over your shoulder.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><span class="k">Bank credentials</span><span class="v">Never asked</span></div>
+          <div class="fact"><span class="k">Network calls</span><span class="v">Zero</span></div>
+          <div class="fact"><span class="k">Account required</span><span class="v">No</span></div>
+          <div class="fact"><span class="k">Sync</span><span class="v">Your iCloud only</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Pricing ===== -->
+    <section class="container" style="padding-top:100px;">
+      <div class="split">
+        <div class="split-stick">
+          <p class="eyebrow">Pricing</p>
+          <h2>One purchase, no subscription.</h2>
+        </div>
+        <div>
+          <p style="margin:0;max-width:56ch;">Free covers up to 3 accounts, the full monthly check-in, the dashboard, a 1-year chart, and CSV export.</p>
+          <p style="max-width:56ch;">One purchase unlocks everything forever &mdash; unlimited accounts, all chart ranges, projections and goals, widgets, themes, and CSV import. No subscription, ever.</p>
+          <p style="max-width:56ch;">Face ID lock and CSV export stay free for everyone: a privacy app that holds your own data hostage would be no privacy app at all.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Also by me ===== -->
+    <section class="container" style="padding-top:100px;padding-bottom:100px;">
+      <div class="others-head">
+        <p class="eyebrow">Also by me</p>
+        <a class="others-more" href="../index.html">View all 5 apps &rarr;</a>
+      </div>
+      <div class="others-grid">
+        <a class="other-card" href="../panchang/index.html">
+          <img src="../../assets/panchang.png" alt="">
+          <span class="o-text"><span class="o-name">Panchang</span><span class="o-short">Daily Hindu almanac</span></span>
+        </a>
+        <a class="other-card" href="../fastring/index.html">
+          <img src="../../assets/fastring.png" alt="">
+          <span class="o-text"><span class="o-name">FastRing</span><span class="o-short">Fasting timer</span></span>
+        </a>
+        <a class="other-card" href="../gymloop/index.html">
+          <img src="../../assets/gymloop.png" alt="">
+          <span class="o-text"><span class="o-name">GymLoop</span><span class="o-short">Gym split tracker</span></span>
+        </a>
+        <a class="other-card" href="../vastu/index.html">
+          <img src="../../assets/vastu.png" alt="">
+          <span class="o-text"><span class="o-name">Vastu</span><span class="o-short">16-zone Vastu compass</span></span>
+        </a>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>&copy; 2026 Hemant Kumar Kaushik. All rights reserved.</span>
-      <span class="links"><a href="privacy/index.html">Privacy</a><a href="support/index.html">Support</a></span>
+  <footer class="site-foot">
+    <div class="site-foot-inner">
+      <h2>Something broken, or an idea worth building?</h2>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:hemantforever007@gmail.com">hemantforever007@gmail.com</a>
+        <a class="btn btn-outline" href="support/index.html">Worth support</a>
+        <a class="btn btn-outline" href="privacy/index.html">Privacy</a>
+      </div>
+      <div class="foot-rule">
+        <span>&copy; 2026 Hemant Kumar Kaushik</span>
+        <span class="links"><a href="../index.html">Apps</a><a href="../../index.html">theHKK.com</a></span>
+      </div>
     </div>
   </footer>
+
   <script src="../../assets/theme.js"></script>
+  <script src="../../assets/apps.js"></script>
 </body>
 </html>

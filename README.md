@@ -23,10 +23,38 @@ URLs for App Store Connect (don't change these once submitted):
 | GymLoop  | `https://thehkk.com/apps/gymloop/privacy/`  | `https://thehkk.com/apps/gymloop/support/`  |
 | Vastu    | `https://thehkk.com/apps/vastu/privacy/`    | `https://thehkk.com/apps/vastu/support/`    |
 
-Apps still awaiting review show a "Coming soon" badge instead of a download
-button. When one goes live, replace that badge in `/apps/<app>/index.html`
-with a country-agnostic App Store link:
-`https://apps.apple.com/app/<slug>/id<numeric-id>`
+## Design system
+
+All styling lives in `assets/site.css`, ported from the Claude Design project
+"theHKK Apps". The whole palette derives from `--ink` and `--paper`; dark mode
+only swaps those (and their `-rgb` companions), so every border and muted tone
+follows automatically. Per-app accents are set inline on `<body>`:
+
+```html
+<body style="--accent-l:oklch(.6 .15 55);--accent-d:oklch(.78 .13 65);
+             --tint-l:oklch(.95 .03 65);--tint-d:oklch(.3 .04 65);">
+```
+
+`-l` is used in light mode, `-d` in dark. App cards carry the same pair as
+`--ca-l` / `--ca-d`. Scripts: `theme.js` (toggle, all pages), `apps.js` (nav
+switcher, `/apps/` pages), `home.js` (stat count-up + terminal, home only).
+
+### Marking an app as live
+
+Apps awaiting review show `<span class="status-pill">Coming soon</span>` and a
+"Tell me when it ships" mailto. When one goes live, in `/apps/<app>/index.html`:
+
+1. Add `is-live` to the status pill and change its text to "On the App Store".
+2. Swap the primary button's `href` for a country-agnostic App Store link:
+   `https://apps.apple.com/app/<slug>/id<numeric-id>`.
+3. Do the same for that app's card in `apps/index.html` and `index.html`, and
+   add `is-live` to its `.sw-dot` in every switcher (each `/apps/` page has one).
+
+### Dropping in real screenshots
+
+The phone frames are typographic placeholders. Each one has a comment showing
+the swap — replace the `.phone-caption` div with an `<img>` and the frame will
+crop it correctly.
 
 ## Preview locally
 
