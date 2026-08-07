@@ -22,6 +22,7 @@ URLs for App Store Connect (don't change these once submitted):
 | Worth    | `https://thehkk.com/apps/worth/privacy/`    | `https://thehkk.com/apps/worth/support/`    |
 | GymLoop  | `https://thehkk.com/apps/gymloop/privacy/`  | `https://thehkk.com/apps/gymloop/support/`  |
 | Vastu    | `https://thehkk.com/apps/vastu/privacy/`    | `https://thehkk.com/apps/vastu/support/`    |
+| Lagna    | `https://thehkk.com/apps/lagna/privacy/`    | `https://thehkk.com/apps/lagna/support/`    |
 
 ## Design system
 
