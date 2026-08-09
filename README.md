@@ -38,7 +38,20 @@ follows automatically. Per-app accents are set inline on `<body>`:
 
 `-l` is used in light mode, `-d` in dark. App cards carry the same pair as
 `--ca-l` / `--ca-d`. Scripts: `theme.js` (toggle, all pages), `apps.js` (nav
-switcher, `/apps/` pages), `home.js` (stat count-up + terminal, home only).
+switcher, `/apps/` pages), `home.js` (stat count-up + terminal, home only),
+`consent.js` (cookie banner + GA4, home/apps-hub/app pages only).
+
+### Analytics
+
+`consent.js` shows a cookie banner and loads Google Analytics (GA4) only
+after the visitor clicks Accept; Decline (or ignoring the banner) means no
+script ever loads. The Measurement ID lives in a constant at the top of the
+file — swap `GA_MEASUREMENT_ID` in `assets/consent.js` for the real one from
+analytics.google.com.
+
+It's included on the homepage, the apps hub, and each app's own page, but
+deliberately **not** on any `/privacy/` or `/support/` page — those pages
+promise "zero analytics, zero tracking" and should stay that way.
 
 ### Marking an app as live
 
