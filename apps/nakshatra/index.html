@@ -3,15 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lagna — theHKK</title>
-  <meta name="description" content="Lagna for iOS — a Shubh Muhurat planner that finds auspicious dates from real panchang astronomy and plans every ritual around them, entirely on your phone.">
+  <title>Nakshatra — theHKK</title>
+  <meta name="description" content="Nakshatra for iOS — Kundli and Dasha. Your nine grahas as living gems, sized and lit by real computed strength: natal Shadbala, today's gochar, and the running Vimshottari dasha. Everything on your phone.">
   <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))}catch(e){document.documentElement.setAttribute("data-theme","light")}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400..600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/site.css">
+  <style>
+    /* Nakshatra keeps the app's own night-sky palette — deep navy ground,
+       gold accents — in both site themes, so the toggle leaves it dark. */
+    :root, :root[data-theme="light"], :root[data-theme="dark"] {
+      --paper: #0a0d18; --paper-rgb: 10, 13, 24;
+      --card: #10152a; --ink: #ece7da; --ink-rgb: 236, 231, 218;
+      --shadow-rgb: 0, 0, 0;
+      --band: #05070f; --band-ink: #ece7da; --band-ink-rgb: 236, 231, 218;
+      --live: oklch(.82 .14 160); --live-bg: oklch(.3 .06 160); --live-dot: oklch(.75 .15 160);
+      --nav-bg: rgba(10, 13, 24, .82);
+    }
+    body, [data-theme="light"] body, [data-theme="dark"] body { --accent: var(--accent-d); --tint: var(--tint-d); }
+    h1, h2, .app-headline { font-family: Fraunces, Georgia, "Times New Roman", serif; font-weight: 520; letter-spacing: -.015em; }
+  </style>
 </head>
-<body style="--accent-l:oklch(.62 .14 85);--accent-d:oklch(.8 .12 85);--tint-l:oklch(.95 .03 85);--tint-d:oklch(.3 .04 85);">
+<body style="--accent-l:oklch(.63 .13 90);--accent-d:oklch(.84 .13 90);--tint-l:oklch(.95 .03 90);--tint-d:oklch(.24 .04 275);">
   <div class="nav-outer">
     <nav class="nav">
       <a class="nav-brand" href="../../index.html">
@@ -21,8 +35,8 @@
 
       <div class="switcher">
         <button class="switcher-btn" type="button" aria-haspopup="true" aria-expanded="false">
-          <img class="switcher-icon" src="../../assets/lagna.png" alt="">
-          <span class="switcher-label">Lagna</span>
+          <img class="switcher-icon" src="../../assets/nakshatra.png" alt="">
+          <span class="switcher-label">Nakshatra</span>
           <span class="switcher-count">7</span>
           <span class="switcher-chev" aria-hidden="true">&#9660;</span>
         </button>
@@ -61,12 +75,12 @@
               <span class="sw-text"><span class="sw-name">Vastu</span><span class="sw-short">16-zone Vastu compass</span></span>
               <span class="sw-dot" aria-label="Coming soon"></span>
             </a>
-            <a class="switcher-row" href="index.html" aria-current="page" data-search="lagna shubh muhurat planner wedding astrology panchang">
+            <a class="switcher-row" href="../lagna/index.html" data-search="lagna shubh muhurat planner wedding astrology panchang">
               <img class="sw-icon" src="../../assets/lagna.png" alt="">
               <span class="sw-text"><span class="sw-name">Lagna</span><span class="sw-short">Shubh Muhurat planner</span></span>
               <span class="sw-dot" aria-label="Coming soon"></span>
             </a>
-            <a class="switcher-row" href="../nakshatra/index.html" data-search="nakshatra kundli dasha jyotish vedic astrology shadbala grahas gochar vimshottari">
+            <a class="switcher-row" href="index.html" aria-current="page" data-search="nakshatra kundli dasha jyotish vedic astrology shadbala grahas gochar vimshottari">
               <img class="sw-icon" src="../../assets/nakshatra.png" alt="">
               <span class="sw-text"><span class="sw-name">Nakshatra</span><span class="sw-short">Kundli and Dasha</span></span>
               <span class="sw-dot" aria-label="Coming soon"></span>
@@ -92,23 +106,23 @@
       <div class="app-hero-glow" aria-hidden="true"></div>
       <div class="app-hero">
         <div class="app-hero-copy">
-          <p class="breadcrumb"><a href="../index.html">Apps</a> <span>/</span> <span class="here">Lagna</span></p>
+          <p class="breadcrumb"><a href="../index.html">Apps</a> <span>/</span> <span class="here">Nakshatra</span></p>
 
           <div class="app-hero-id">
-            <img src="../../assets/lagna.png" alt="Lagna app icon">
+            <img src="../../assets/nakshatra.png" alt="Nakshatra app icon">
             <div>
-              <h1>Lagna</h1>
-              <div class="app-hero-meta">iOS &middot; Shubh Muhurat planner</div>
+              <h1>Nakshatra</h1>
+              <div class="app-hero-meta">iOS &middot; Kundli and Dasha</div>
             </div>
           </div>
 
-          <p style="margin-top:26px;"><span class="status-pill">Coming soon to the App&nbsp;Store</span></p>
-
-          <p class="app-headline">Find the muhurat. Plan every ritual around it &mdash; from your Lock&nbsp;Screen.</p>
-          <p class="app-intro">Lagna computes auspicious dates on your phone from real panchang astronomy &mdash; tithi, nakshatra, bhadra windows, kharmas, and combustion &mdash; for weddings, engagements, griha pravesh, mundan, and namkaran. Every date shows why it works; none are ever hidden. Lagna is a shortcut, not a pandit ji &mdash; he still fixes the final minute.</p>
+          <p class="app-headline">Your nine grahas as living gems &mdash; real Shadbala, real dasha, computed on your phone.</p>
+          <p class="app-intro">Nakshatra is a Vedic astrology (Jyotish) app that renders your nine grahas as living gems. Each gem&#8217;s size, glow and mood come from real computed strength &mdash; your natal Shadbala, today&#8217;s transits (gochar), and the running Vimshottari dasha. Readings, not predictions: every line is descriptive and classical, with no AI and no server &mdash; everything is computed on-device and verified against Swiss Ephemeris.</p>
 
           <div class="btn-row">
-            <a class="btn btn-primary" href="mailto:hemantforever007@gmail.com?subject=Lagna%20%E2%80%94%20tell%20me%20when%20it%20ships">Tell me when it ships</a>
+            <!-- TODO: replace href with the real App Store link after release,
+                 e.g. https://apps.apple.com/app/<slug>/id<numeric-id> -->
+            <a class="btn btn-primary" href="#">Download on the App&nbsp;Store</a>
             <a class="btn btn-outline" href="support/index.html">Support</a>
             <a class="btn btn-outline" href="privacy/index.html">Privacy</a>
           </div>
@@ -116,13 +130,13 @@
 
         <div class="phone-wrap">
           <!-- To use a real screenshot, replace .phone-caption with:
-               <img src="../../assets/shots/lagna-muhurat.png" alt="Lagna muhurat finder"> -->
+               <img src="../../assets/shots/nakshatra-01-today.jpg" alt="Nakshatra today screen"> -->
           <div class="phone">
             <div class="phone-screen">
               <div class="phone-caption">
-                <span class="kind">Muhurat</span>
-                <span class="what">Wedding date
-found &amp; explained</span>
+                <span class="kind">Today</span>
+                <span class="what">Nine gems, lit
+by real Shadbala</span>
               </div>
               <div class="phone-notch" aria-hidden="true"></div>
             </div>
@@ -135,28 +149,28 @@ found &amp; explained</span>
     <section class="screens">
       <div class="screens-head">
         <h2>A look inside.</h2>
-        <div class="screens-note">In development &mdash; screenshots to come</div>
+        <div class="screens-note">Screenshots to come</div>
       </div>
       <div class="screens-strip">
         <div class="screen">
-          <div class="phone"><div class="phone-screen"><div class="phone-caption"><span class="what">FINDER
-every date, with the why</span></div></div></div>
-          <p class="screen-caption">Tithi, nakshatra, and bhadra windows shown plainly next to every date.</p>
+          <div class="phone"><div class="phone-screen"><div class="phone-caption"><span class="what">ORB RING
+Abhijit &middot; Rahu Kaal</span></div></div></div>
+          <p class="screen-caption">The daily orb ring and day line, with real muhurat times and the panchang header on top.</p>
         </div>
         <div class="screen">
-          <div class="phone"><div class="phone-screen"><div class="phone-caption"><span class="what">COUNTDOWN
-Lock Screen Live</span></div></div></div>
-          <p class="screen-caption">A themed hero countdown that lives on the Lock Screen, shareable by link.</p>
+          <div class="phone"><div class="phone-screen"><div class="phone-caption"><span class="what">SHADBALA
+all six strengths</span></div></div></div>
+          <p class="screen-caption">Full six-fold Shadbala breakdowns behind every gem.</p>
         </div>
         <div class="screen">
-          <div class="phone"><div class="phone-screen"><div class="phone-caption"><span class="what">RUNSHEET
-your tradition, your order</span></div></div></div>
-          <p class="screen-caption">Pick your tradition, toggle off what you skip, and drag to reorder.</p>
+          <div class="phone"><div class="phone-screen"><div class="phone-caption"><span class="what">DASHA
+maha &rarr; antar &rarr; pratyantar</span></div></div></div>
+          <p class="screen-caption">The complete Vimshottari timeline, each period with its reading.</p>
         </div>
         <div class="screen">
-          <div class="phone"><div class="phone-screen"><div class="phone-caption"><span class="what">DAY-OF
-NOW / NEXT, +15 +30 Skip</span></div></div></div>
-          <p class="screen-caption">One-thumb buttons that re-flow the day around the muhurat, which never moves.</p>
+          <div class="phone"><div class="phone-screen"><div class="phone-caption"><span class="what">ASK
+dated windows, shown work</span></div></div></div>
+          <p class="screen-caption">Ask a question and get dated timing windows with the classical logic, step by step.</p>
         </div>
       </div>
     </section>
@@ -166,56 +180,56 @@ NOW / NEXT, +15 +30 Skip</span></div></div></div>
       <div class="split">
         <div class="split-stick">
           <p class="eyebrow">Features</p>
-          <h2>Every date, with the reasoning shown.</h2>
+          <h2>Strength you can see, logic you can check.</h2>
         </div>
         <div class="features-grid">
           <div class="feature-cell">
             <span class="dot" aria-hidden="true"></span>
-            <div class="f-title">Muhurat finder</div>
-            <div class="f-body">Auspicious dates for weddings, engagements, griha pravesh, mundan, and namkaran, computed on-device from tithi, nakshatra, bhadra windows, kharmas, and combustion. Every date shows why it works.</div>
+            <div class="f-title">Living gems</div>
+            <div class="f-body">Your nine grahas rendered as gems whose size, glow and mood come from real computed strength &mdash; natal Shadbala, today&#8217;s transits (gochar), and the running Vimshottari dasha. Nothing is decorative; every glint is a number.</div>
           </div>
           <div class="feature-cell">
             <span class="dot" aria-hidden="true"></span>
-            <div class="f-title">Personalized ranking</div>
-            <div class="f-body">Add birth details and dates re-rank by tara bala and chandra bala for each person. If a birth time is unknown, Lagna shows both candidate nakshatras rather than guessing.</div>
+            <div class="f-title">Orb ring &amp; day line</div>
+            <div class="f-body">A daily orb ring and day line with real muhurat times &mdash; Abhijit, Rahu Kaal &mdash; under a panchang header showing today&#8217;s tithi, nakshatra and vara.</div>
           </div>
           <div class="feature-cell">
             <span class="dot" aria-hidden="true"></span>
-            <div class="f-title">Lagna countdown</div>
-            <div class="f-body">A themed hero screen with a Lock Screen Live Activity, shareable by link. Recipients get the full countdown free &mdash; no account, no server, just the link.</div>
+            <div class="f-title">Shadbala, in full</div>
+            <div class="f-body">Complete six-fold Shadbala breakdowns for every graha, so you can see exactly where each gem&#8217;s strength comes from.</div>
           </div>
           <div class="feature-cell">
             <span class="dot" aria-hidden="true"></span>
-            <div class="f-title">Runsheet</div>
-            <div class="f-body">Pick your tradition &mdash; Punjabi, Marwari, Gujarati, South Indian, and more &mdash; toggle off what your family doesn&#8217;t do, and drag to reorder. Every time derives from the locked muhurat, which never moves.</div>
+            <div class="f-title">Vimshottari timeline</div>
+            <div class="f-body">The complete dasha timeline &mdash; mahadasha &rarr; antardasha &rarr; pratyantar &mdash; with a reading for each period.</div>
           </div>
           <div class="feature-cell">
             <span class="dot" aria-hidden="true"></span>
-            <div class="f-title">Day-of Timekeeper</div>
-            <div class="f-body">Giant NOW/NEXT cards and one-thumb +15/+30/Skip buttons that re-flow the whole schedule around the muhurat, and propose what to cut if the day runs short.</div>
+            <div class="f-title">Ask</div>
+            <div class="f-body">Ask a question and get dated timing windows, with the step-by-step classical logic behind every answer laid out for you to check.</div>
           </div>
           <div class="feature-cell">
             <span class="dot" aria-hidden="true"></span>
-            <div class="f-title">Shagun QR studio</div>
-            <div class="f-body">Themed UPI QR posters with a mandatory test-scan gate before export. Lagna never touches the money &mdash; it only renders an image of your own UPI ID.</div>
+            <div class="f-title">Kundli charts</div>
+            <div class="f-body">North-Indian kundli charts &mdash; D1 and D9 &mdash; downloadable as images to keep or share.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== On device ===== -->
+    <!-- ===== Readings, not predictions ===== -->
     <section class="band">
       <div class="band-inner">
         <div>
           <p class="eyebrow">On device</p>
-          <h2>Your janma details never leave your phone.</h2>
-          <p>Muhurat calculations run from a built-in panchang astronomy engine, entirely on-device &mdash; no network requests, no account. Hindi and English throughout, with Siri Shortcuts and Lock Screen widgets built in.</p>
+          <h2>Readings, not predictions.</h2>
+          <p>Every line in Nakshatra is descriptive and classical, never predictive &mdash; and none of it is generated by AI. There is no LLM, no server, and no account: everything is computed on your phone and verified against Swiss Ephemeris.</p>
         </div>
         <div class="facts">
-          <div class="fact"><span class="k">Status</span><span class="v">In development</span></div>
-          <div class="fact"><span class="k">Network requests</span><span class="v">None</span></div>
-          <div class="fact"><span class="k">Account required</span><span class="v">No</span></div>
-          <div class="fact"><span class="k">Birth details</span><span class="v">On device only</span></div>
+          <div class="fact"><span class="k">Data collected</span><span class="v">None</span></div>
+          <div class="fact"><span class="k">AI / LLM</span><span class="v">None</span></div>
+          <div class="fact"><span class="k">Computation</span><span class="v">Fully on device</span></div>
+          <div class="fact"><span class="k">Verified against</span><span class="v">Swiss Ephemeris</span></div>
         </div>
       </div>
     </section>
@@ -225,14 +239,22 @@ NOW / NEXT, +15 +30 Skip</span></div></div></div>
       <div class="split">
         <div class="split-stick">
           <p class="eyebrow">Pricing</p>
-          <h2>One lifetime unlock.</h2>
+          <h2>Free, with Nakshatra&nbsp;Plus.</h2>
         </div>
         <div>
-          <p style="margin:0;max-width:56ch;">The muhurat finder is free to try &mdash; see auspicious dates and the full reasoning behind each one.</p>
-          <p style="max-width:56ch;">A one-time lifetime unlock adds personalized ranking by birth details, the Lagna countdown with its Lock Screen Live Activity, the full ritual runsheet, and the Shagun QR poster studio.</p>
-          <p style="max-width:56ch;"><strong style="color:var(--ink);">$7.99 once, no subscription.</strong> U.S. pricing shown &mdash; the App Store will convert to your local currency at launch.</p>
+          <p style="margin:0;max-width:56ch;">The free tier covers the orb ring, the day line, the daily card, your kundli, and 3 questions in Ask.</p>
+          <p style="max-width:56ch;">Nakshatra Plus unlocks the rest of the app.</p>
 
-          <p class="updated">Purchases will be subject to Apple&#8217;s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">standard EULA</a>.</p>
+          <h3>Three ways to get Plus</h3>
+          <ul class="feature-list">
+            <li><strong>Monthly</strong> &mdash; $4.99 per month (&#8377;299)</li>
+            <li><strong>Annual</strong> &mdash; $39.99 per year (&#8377;999), with a 7-day free trial</li>
+            <li><strong>Lifetime</strong> &mdash; $99.99 once (&#8377;2999), no subscription &mdash; and family-sharable</li>
+          </ul>
+
+          <p style="max-width:56ch;margin-top:20px;">All purchases go through Apple &mdash; I never see your payment details. Subscriptions renew automatically until cancelled, and you can cancel any time in iOS Settings; the <a href="support/index.html" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">support page</a> has the steps.</p>
+
+          <p class="updated">Purchases are subject to Apple&#8217;s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px;">standard EULA</a>.</p>
         </div>
       </div>
     </section>
@@ -264,9 +286,9 @@ NOW / NEXT, +15 +30 Skip</span></div></div></div>
           <img src="../../assets/vastu.png" alt="">
           <span class="o-text"><span class="o-name">Vastu</span><span class="o-short">16-zone Vastu compass</span></span>
         </a>
-        <a class="other-card" href="../nakshatra/index.html">
-          <img src="../../assets/nakshatra.png" alt="">
-          <span class="o-text"><span class="o-name">Nakshatra</span><span class="o-short">Kundli and Dasha</span></span>
+        <a class="other-card" href="../lagna/index.html">
+          <img src="../../assets/lagna.png" alt="">
+          <span class="o-text"><span class="o-name">Lagna</span><span class="o-short">Shubh Muhurat planner</span></span>
         </a>
       </div>
     </section>
@@ -277,7 +299,7 @@ NOW / NEXT, +15 +30 Skip</span></div></div></div>
       <h2>Something broken, or an idea worth building?</h2>
       <div class="btn-row">
         <a class="btn btn-primary" href="mailto:hemantforever007@gmail.com">hemantforever007@gmail.com</a>
-        <a class="btn btn-outline" href="support/index.html">Lagna support</a>
+        <a class="btn btn-outline" href="support/index.html">Nakshatra support</a>
         <a class="btn btn-outline" href="privacy/index.html">Privacy</a>
       </div>
       <div class="foot-rule">
