@@ -24,6 +24,7 @@ URLs for App Store Connect (don't change these once submitted):
 | Vastu    | `https://thehkk.com/apps/vastu/privacy/`    | `https://thehkk.com/apps/vastu/support/`    |
 | Lagna    | `https://thehkk.com/apps/lagna/privacy/`    | `https://thehkk.com/apps/lagna/support/`    |
 | Nakshatra | `https://thehkk.com/apps/nakshatra/privacy/` | `https://thehkk.com/apps/nakshatra/support/` |
+| Staff Book | `https://thehkk.com/apps/staffbook/privacy/` | `https://thehkk.com/apps/staffbook/support/` |
 
 ## Design system
 
