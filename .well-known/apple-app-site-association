@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["7V7HQ4N829.com.hkk.gymloop"],
+        "components": [
+          { "/": "/apps/gymloop/c/*", "comment": "Challenge invite links" }
+        ]
+      }
+    ]
+  }
+}
